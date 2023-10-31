@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BarCodeApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BarCodeApp"
+    xmlns:BarCodeApp="clr-namespace:BarCodeApp.Views"
+    Shell.FlyoutBehavior="Flyout"
+    x:Name="MyAppShell"
+    >
+
+    
+    <!--<FlyoutItem Route="Login" x:Name="MyLoginPage">
+        <ShellContent ContentTemplate="{DataTemplate myLogin:LoginPage}"/>
+    </FlyoutItem>-->
+    <FlyoutItem Route="DashBoardPage" x:Name="MyDashBoardPage">
+        <ShellContent ContentTemplate="{DataTemplate BarCodeApp:DashBoardPage}"/>
+    </FlyoutItem>
+
+    <ShellContent x:Name="MyTaging"
+        Title=""
+        ContentTemplate="{DataTemplate BarCodeApp:TaggingPage}"
+        Route="TaggingPage" />
+
+</Shell>

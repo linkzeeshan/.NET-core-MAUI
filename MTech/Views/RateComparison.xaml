@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarCodeApp.Views.RateComparison"
+             Title="RateComparison"
+>
+    <StackLayout BackgroundColor="#1a5ca6">
+        
+      
+        <!--grid-->
+
+        <Grid  RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions=" 350, 100, 100" >
+            <!--spacing lables-->
+            <Label Grid.Row="0" Grid.Column="1" Text="" />
+            <Label Grid.Row="1" Grid.Column="1" Text="" />
+         
+        
+         <!--/************************************************-->
+
+             <!--Bar code entry Frame-->
+    <Frame HeightRequest="55" BorderColor="White" Grid.Row="5" Grid.Column="0" CornerRadius="10" WidthRequest="300" HorizontalOptions="Center" BackgroundColor="White">
+      <Entry HorizontalTextAlignment="Start" x:Name="txtEnterBarCodeRateComparision" HeightRequest="40" FontSize="Small" PlaceholderColor="DarkGrey" FontAttributes="Bold" TextColor="Black" Placeholder="Entr  BarCode  Number"/>
+        
+         </Frame>
+              <!--scan image putted inside entry this way-->
+            <AbsoluteLayout WidthRequest="250">
+                <!--image icon of scanning-->
+                <Image Source="barcodeno.png"
+                           AbsoluteLayout.LayoutFlags="PositionProportional"
+                          AbsoluteLayout.LayoutBounds="1.1, 9.1, -1, -1"
+                       HeightRequest="60"
+                       WidthRequest="60" />
+                </AbsoluteLayout>
+                <!--Bar code ends-->
+            
+        </Grid>
+
+          <!--for spacing-->
+        <Label Text="" />
+    
+        <!--btn search start here-->
+        <AbsoluteLayout WidthRequest="300" >
+            <Button Text="Search" FontSize="Medium"
+                    x:Name="btnSearchRateComparison"
+                    FontAttributes="Bold"
+                    Clicked="btnSearchRateComparison_Clicked"
+                       AbsoluteLayout.LayoutFlags="All"
+                       AbsoluteLayout.LayoutBounds="0, 1, 1, 1" CornerRadius="10" 
+                            WidthRequest="300"
+                            HorizontalOptions="Start"/>
+          
+            <!--image icon of search-->
+            <Image Source="searchbtn.png"
+    AbsoluteLayout.LayoutFlags="PositionProportional"
+    AbsoluteLayout.LayoutBounds="0.9, 0.5, 35, -1"
+    HeightRequest="60"
+    WidthRequest="60" />
+        </AbsoluteLayout>
+         <!--btn search ends-->
+    <!--spacing grid-->
+        <Grid RowDefinitions="Auto , Auto , Auto, Auto , Auto" ColumnDefinitions="Auto, Auto ,Auto,Auto,Auto">
+            <Label Grid.Row="0" Grid.Column="0" Text=""/>
+            <Label Grid.Row="2" Grid.Column="0" Text=""/>
+            <Label Grid.Row="3" Grid.Column="0" Text=""/>
+        </Grid>
+         <!--spacing grid ends-->
+    
+          <!--fram including row columns including item Name , unit and sale price labels-->
+
+        <Frame Margin="10" BorderColor="White" CornerRadius="20" HeightRequest="280">       
+            <Grid RowDefinitions="Auto, Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="20, Auto,Auto,Auto" HorizontalOptions="End"    Margin="20" 
+                 >
+            <!--<Image Source="print.png" Aspect="AspectFill" HeightRequest="400" />-->
+            <!--one item Name-->
+            <Label Grid.Row="0 " Grid.Column="0" Text=""/>
+            <Label Grid.Row="1" Grid.Column="1" Text="Item Name" TextColor="Black" FontAttributes="Bold"/>
+                
+            <Frame   Grid.Row="2" Grid.Column="1" HeightRequest="25 " BackgroundColor="LightGray" BorderColor="LightGray" WidthRequest="270" HorizontalOptions="Start" >
+            <Label Text="" x:Name="lblItemName" TextColor="Black"  HeightRequest="20"/>
+            </Frame>
+                
+                <!--two unit--> 
+            <Label Grid.Row="4"/>
+            <Label Grid.Row="5" Grid.Column="1" Text="Unit" TextColor="Black" FontAttributes="Bold"/>
+            <Frame  Grid.Row="6" Grid.Column="1" HeightRequest="25 " BackgroundColor="LightGray" BorderColor="LightGray"  WidthRequest="270" HorizontalOptions="Start" >
+                <Label Text=""  x:Name="lblUnit" TextColor="Black"  HeightRequest="20"/>
+            </Frame>
+                <!--three sale price-->
+            <Label Grid.Row="7"/>
+            <Label Grid.Row="8" Grid.Column="1" Text="Sale Price" TextColor="Black" FontAttributes="Bold"/>
+            <Frame  Grid.Row="9" Grid.Column="1" HeightRequest="25 " BackgroundColor="LightGray" BorderColor="LightGray"  WidthRequest="270" HorizontalOptions="Start" >
+                <Label Text=""  TextColor="Black" x:Name="lblSalePrice"  HeightRequest="20"/>
+            </Frame>
+            <Label Grid.Row="10" Grid.Column="1"/>
+        </Grid>
+        </Frame>
+        <!--for spacing-->
+        <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
+            <Label Grid.Row="0" Grid.Column="0" Text=""/>
+        </Grid>
+        <!--button print-->
+        <AbsoluteLayout WidthRequest="300" >
+            <Button Text="Print Barcode" FontSize="Medium"
+                x:Name="btnPrint"
+                FontAttributes="Bold"
+                Clicked="btnPrint_Clicked"
+                   AbsoluteLayout.LayoutFlags="All"
+                   AbsoluteLayout.LayoutBounds="0, 1, 1, 1" CornerRadius="10" 
+                        WidthRequest="300"
+                        HorizontalOptions="Start"/>
+
+            <!--image icon of PRINT-->
+            <Image Source="print.png"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.1, 0, 2, -1"
+           HeightRequest="60"
+           WidthRequest="60" />
+        </AbsoluteLayout>
+          <!--btn print ends-->
+    
+    <!--TO BE CONTINUED FROM THIS POINT-->
+
+    </StackLayout>
+    
+</ContentPage>

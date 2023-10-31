@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarCodeApp.Views.DashBoardPage"
+             Title="Dashboard">
+
+    <!--<ContentPage.Behaviors>
+      
+    </ContentPage.Behaviors>-->
+
+    <ContentPage.ToolbarItems  >
+        <ToolbarItem x:Name="btnSetting" IconImageSource="setting.png"  Clicked="btnSetting_Clicked_1"  />
+
+    </ContentPage.ToolbarItems>
+    <StackLayout BackgroundColor="White">
+          <!--LOGO , company name , branch name--> 
+        <Image Source="logo.png" HorizontalOptions="Start"></Image>
+        <Label x:Name="lblCompanyName" Text="Company Name" TextColor="Black" FontAttributes="Bold" FontSize="20" Margin="5"/>
+        <Label x:Name="lblBrachName" Text="Islamabad" TextColor="Black" FontSize="15" Margin="5" FontAttributes="Bold"/>
+           <!--finished here-->
+        
+        
+        <!--Grid started here-->
+        
+        <!--50/50 is for spacing--> 
+        <Grid RowDefinitions="50,50" ColumnDefinitions="50,50"></Grid>
+        
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto ,Auto" ColumnSpacing="15" RowSpacing="5" ColumnDefinitions="Auto,Auto,Auto,Auto, Auto, Auto, Auto" BackgroundColor="#1a5ca6">
+            <!--grid 0 started-->
+           
+                <Label Grid.Row="0" WidthRequest="12"/>
+        <!--/**********************************************************-->
+                  <!--First Button-->
+                <ImageButton BackgroundColor="White" HorizontalOptions="Start" HeightRequest="90" WidthRequest="80" x:Name="btnNewStock" CornerRadius="10" Grid.Row="1" Grid.Column="1" Source="newstocktake.png" Clicked="btnNewStock_Clicked"/>
+          
+                <!--/*****************************************************************-->
+                  <!--Second Button-->
+                <ImageButton BackgroundColor="White" HorizontalOptions="Start" HeightRequest="90" WidthRequest="80" x:Name="btnContinueStock"  CornerRadius="10" Grid.Row="1" Grid.Column="3" Source="continuestocktake.png" Clicked="btnContinueStock_Clicked"/>
+          <!--/*****************************************************************-->
+            <!--Third Button-->
+                <ImageButton BackgroundColor="White" HorizontalOptions="Start" HeightRequest="90" WidthRequest="80"  CornerRadius="10" Grid.Row="1" Grid.Column="5" x:Name="btnStockTakeList" Source="stocktakelist.png" Clicked="btnStockTakeList_Clicked"/>
+            <!--first buttons row ends here-->
+            <!--/*********************************-->
+            <!--second button row starts here-->
+            <Label Grid.Row="2" Grid.Column="1" HeightRequest="10" Text=""/>
+            
+            <!--/*************-->
+            <!--second row first  button-->
+            <ImageButton  Grid.Row="3" Grid.Column="1" BackgroundColor="White" HorizontalOptions="Center" HeightRequest="90" WidthRequest="80" CornerRadius="10"  x:Name="btnPriceCheckinggg" Source="pricechecking.png" Clicked="btnPriceChecking_Clicked"/>
+            <Label Grid.Row="4" Grid.Column="1"  WidthRequest="10 " HorizontalOptions="End"/>
+            
+            <!--TO BE CONTINUE FROM HERE...-->
+
+        </Grid>
+        
+        
+    </StackLayout>
+
+</ContentPage>

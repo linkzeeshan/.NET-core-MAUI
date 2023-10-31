@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarCodeApp.Views.Settings"
+             Title="Settings">
+    <ScrollView BackgroundColor="#1a5ca6">
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto , Auto" ColumnDefinitions="10, 140, 220, 10">
+            <Label Grid.Row="0" Grid.Column="0" />
+            <Label Grid.Row="1" Grid.Column="1" Text="Company Name : " HorizontalOptions="End" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
+            <Entry Grid.Row="1" Grid.Column="2" WidthRequest="220" Placeholder="Company Name" x:Name="txtName" TextColor="White" HorizontalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="1" Text="Branch Name : " HorizontalOptions="End" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
+            <Entry Grid.Row="2" Grid.Column="2" WidthRequest="220" Placeholder="BranchName" x:Name="txtBranchName" TextColor="White" HorizontalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="1" Text="Email Address : " HorizontalOptions="End" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
+            <Entry Grid.Row="3" Grid.Column="2" WidthRequest="220" Placeholder="Email Address" x:Name="txtEmail" TextColor="White" HorizontalOptions="Center" />
+            <Label Grid.Row="4" Grid.Column="1" Text="Server name" x:Name="lblServerName" HorizontalOptions="End" VerticalOptions= "Center" TextColor="white" FontAttributes="Bold"/>
+            <Entry Grid.Row="4" Grid.Column="2" Placeholder="server name" x:Name="txtServerName" HorizontalOptions="Center" TextColor="White" WidthRequest="220"/>
+
+            <Label Grid.Row="5" Grid.Column="1" Text="DataBase name" x:Name="lbdDatabaseName" HorizontalOptions="End" VerticalOptions= "Center" TextColor="white" FontAttributes="Bold"/>
+            <Entry Grid.Row="5" Grid.Column="2" Placeholder="DataBase name" x:Name="txtDatabaseName" TextColor="White" HorizontalOptions="Center" WidthRequest="220"/>
+
+            <Label Grid.Row="6" Grid.Column="1" Text="Generated Code : " HorizontalOptions="End" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
+            <Entry Grid.Row="6" Grid.Column="2" WidthRequest="220" Placeholder="Generated Code" x:Name="txtGeneratedCode" HorizontalOptions="Center" IsEnabled="False" FontAttributes="Bold" FontSize="Large" />
+            <Label Grid.Row="7" Grid.Column="1" Text="App Code : " HorizontalOptions="End" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
+            <Entry Grid.Row="7" Grid.Column="2" WidthRequest="220" Placeholder="App Code" TextColor="White" x:Name="txtAppCode" HorizontalOptions="Center" />
+            <Button Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="White" TextColor="Black" x:Name="btnSave" Text="Save" Clicked="btnSave_Clicked" />
+
+        </Grid>
+
+    </ScrollView>
+</ContentPage>
